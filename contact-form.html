@@ -11,89 +11,95 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <form method="post" class="centred-form" id="contact-form" action="/contact-form-handler">
-            <h1>
-                Contact form
-            </h1>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="Email">
-            </div>
-            <div class="form-group">
-                <label>Password (at least 8 characters)</label>
-                <input type="password">
-            </div>
-            <fieldset class="form-group">
-                <legend>Colour</legend>
-                <div class="check-options">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="colour" id="blue">
-                        <label class="form-check-label" for="blue">
-                            Blue
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="colour" id="green">
-                        <label class="form-check-label" for="green">
-                            Green
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="colour" id="red">
-                        <label class="form-check-label" for="red">
-                            Red
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="colour" id="black">
-                        <label class="form-check-label" for="black">
-                        Black
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="colour" id="brown">
-                        <label class="form-check-label" for="brown">
-                            Brown
-                        </label>
-                    </div>
+        <div class="container">
+            <form method="post" class="centred-main" id="contact-form" action="contact-form-handler.html" novalidate>
+                <h1>
+                    Contact form
+                </h1>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Email">
+                    <div class="invalid">Please supply a valid email address</div>
                 </div>
-            </fieldset>
-            <fieldset class="form-group">
-                <legend>Animal</legend>
-                <div class="check-options">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="bear" id="bear">
-                        <label class="form-check-label" for="bear">
-                            Bear
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="tiger" id="tiger">
-                        <label class="form-check-label" for="tiger">
-                            Tiger
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="snake" id="snake">
-                        <label class="form-check-label" for="snake">
-                            Snake
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="donkey" id="donkey">
-                        <label class="form-check-label" for="donkey">
-                        Donkey
-                        </label>
-                    </div>
+                <div class="form-group">
+                    <label>Password (at least 8 characters)</label>
+                    <input type="password" id="password" placeholder="Enter password..." minlength="8" required>
+                    <div class="invalid">Must be at least 8 characters</div>
                 </div>
-            </fieldset>
-            <div class="form-group">
-                <label>Type of tiger</label>
-                <input type="text">
-            </div>
-            <div class="form-group">
-                <button type="submit">Submit</button>
-            </div>
-        </form>
+                <fieldset class="form-group">
+                    <legend>Colour</legend>
+                    <div class="check-options">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="colour" id="blue">
+                            <label class="form-check-label" for="blue">
+                                Blue
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="colour" id="green">
+                            <label class="form-check-label" for="green">
+                                Green
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="colour" id="red">
+                            <label class="form-check-label" for="red">
+                                Red
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="colour" id="black">
+                            <label class="form-check-label" for="black">
+                            Black
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="colour" id="brown">
+                            <label class="form-check-label" for="brown">
+                                Brown
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="form-group">
+                    <legend>Animal</legend>
+                    <div class="check-options">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="bear" id="bear">
+                            <label class="form-check-label" for="bear">
+                                Bear
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="tiger" id="tiger">
+                            <label class="form-check-label" for="tiger">
+                                Tiger
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="snake" id="snake">
+                            <label class="form-check-label" for="snake">
+                                Snake
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="donkey" id="donkey">
+                            <label class="form-check-label" for="donkey">
+                            Donkey
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    <label for="tiger-type">Type of tiger</label>
+                    <input type="text" name="tiger-type" id="tiger-type" required="required">
+                    <div class="invalid">Please provide a tiger type</div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="form-submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        <script src="script.js"></script>
     </body>
 </html>

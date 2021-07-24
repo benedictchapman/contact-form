@@ -9,30 +9,35 @@ body {
   height: 100%;
   display: -ms-grid;
   display: grid;
-  background: #eee;
+  background: #0f1334;
   color: #333;
   font-family: Roboto, sans-serif;
 }
 
-.centred-form {
-  background: #fff;
+.container {
   margin: auto;
+  width: 100%;
+  padding: 20px;
+}
+
+.centred-main {
+  margin: auto;
+  background: #fff;
   width: 80%;
   max-width: 600px;
-  border: 1px solid #09d2b1;
-  padding: 50px;
+  padding: 40px;
   border-radius: 15px;
 }
 
-.centred-form h1 {
+.centred-main h1 {
   margin: 0 0 2rem 0;
   padding: 0;
-  color: #09d2b1;
+  color: #0f1334;
   font-weight: 300;
   font-size: 2.5rem;
 }
 
-.centred-form .form-group {
+.centred-main .form-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,21 +56,35 @@ body {
   margin: 0;
 }
 
-.centred-form .form-group label, .centred-form .form-group legend {
+.centred-main .form-group label, .centred-main .form-group legend {
   margin-bottom: .5rem;
 }
 
-.centred-form .form-group input {
+.centred-main .form-group input {
   padding: .5rem;
   border: 1px solid #999;
   border-radius: 5px;
 }
 
-.centred-form .form-group input[type="text"], .centred-form .form-group input[type="email"], .centred-form .form-group input[type="password"] {
+.centred-main .form-group input[type="text"], .centred-main .form-group input[type="email"], .centred-main .form-group input[type="password"] {
   width: 100%;
 }
 
-.centred-form .form-group .check-options {
+.centred-main .form-group .invalid {
+  display: none;
+  opacity: 0;
+  color: #f00;
+  font-size: .75rem;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.centred-main .form-group .invalid.show {
+  display: block;
+  opacity: 1;
+}
+
+.centred-main .form-group .check-options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,20 +98,20 @@ body {
   width: 100%;
 }
 
-.centred-form .form-group .check-options .form-check:not(:last-child) {
+.centred-main .form-group .check-options .form-check:not(:last-child) {
   margin-right: 1rem;
 }
 
-.centred-form .form-group button[type="submit"] {
-  background: #09d2b1;
-  color: #333;
+.centred-main .form-group button[type="submit"] {
+  background: #0f1334;
+  color: #fff;
   padding: .75rem 1.5rem;
   border: 0;
   border-radius: 5px;
   font-size: 1rem;
 }
 
-.centred-form .form-group:not(:last-child) {
+.centred-main .form-group:not(:last-child) {
   margin-bottom: 2rem;
 }
 /*# sourceMappingURL=style.css.map */
