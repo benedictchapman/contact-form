@@ -1,0 +1,98 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  background: #eee;
+  color: #333;
+  font-family: Roboto, sans-serif;
+}
+
+.centred-form {
+  background: #fff;
+  margin: auto;
+  width: 80%;
+  max-width: 600px;
+  border: 1px solid #09d2b1;
+  padding: 50px;
+  border-radius: 15px;
+}
+
+.centred-form h1 {
+  margin: 0 0 2rem 0;
+  padding: 0;
+  color: #09d2b1;
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+.centred-form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.centred-form .form-group label, .centred-form .form-group legend {
+  margin-bottom: .5rem;
+}
+
+.centred-form .form-group input {
+  padding: .5rem;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+.centred-form .form-group input[type="text"], .centred-form .form-group input[type="email"], .centred-form .form-group input[type="password"] {
+  width: 100%;
+}
+
+.centred-form .form-group .check-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: .5rem 1rem;
+  width: 100%;
+}
+
+.centred-form .form-group .check-options .form-check:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.centred-form .form-group button[type="submit"] {
+  background: #09d2b1;
+  color: #333;
+  padding: .75rem 1.5rem;
+  border: 0;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.centred-form .form-group:not(:last-child) {
+  margin-bottom: 2rem;
+}
+/*# sourceMappingURL=style.css.map */
