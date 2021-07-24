@@ -114,4 +114,11 @@ body {
 .centred-main .form-group:not(:last-child) {
   margin-bottom: 2rem;
 }
+
+.centred-main .form-group.secret {
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
 /*# sourceMappingURL=style.css.map */

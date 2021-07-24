@@ -86,5 +86,10 @@ body {
         &:not(:last-child) {
             margin-bottom: 2rem;
         }
+        &.secret {
+            display: none;
+            opacity: 0;
+            transition: opacity 1s;
+        }
     }
 }

@@ -1,36 +1,52 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-    // Your code to run since DOM is loaded and ready
-    const form = document.querySelector("form");
+document.addEventListener("DOMContentLoaded", () => {
+    
+    const initValidation= function() {
+        const emailField = document.querySelector("#email");
+        const emailInvalid = document.querySelector("#email + .invalid");
+        const passwordField = document.querySelector("#password");
+        const passwordInvalid = document.querySelector("#password + .invalid");
+        const tigerField = document.querySelector("#tiger-type");
+        const tigerInvalid = document.querySelector("#tiger-type + .invalid");
 
-    const emailField = document.querySelector("#email");
-    const emailInvalid = document.querySelector("#email + .invalid");
-    const passwordField = document.querySelector("#password");
-    const passwordInvalid = document.querySelector("#password + .invalid");
-    const tigerField = document.querySelector("#tiger-type");
-    const tigerInvalid = document.querySelector("#tiger-type + .invalid");
+        fields = [emailField,passwordField,tigerField];
+        messages = [emailInvalid,passwordInvalid,tigerInvalid];
 
-    fields = [emailField,passwordField,tigerField];
-    invalidMessages = [emailInvalid,passwordInvalid,tigerInvalid];
+        const submitBtn = document.querySelector("#form-submit");
 
-    const submitBtn = document.querySelector("#form-submit");
+        submitBtn.addEventListener("click", (event) => {
+            fields.forEach((field,index) => {
+                if (!field.validity.valid) {
+                    messages[index].style.display = "block";
+                    messages[index].clientHeight;
+                    messages[index].style.opacity = 1;
+                    event.preventDefault();
+                } else {
+                    messages[index].style.display = "none";
+                    messages[index].style.opacity = 0;
+                }
+            })
+        });
+    }
 
-    emailField.setAttribute("border-color", "red");
-
-    submitBtn.addEventListener("click", (event) => {
-        console.log("clicked");
-        fields.forEach((field,index) => {
-            console.log(field);
-            console.log(field.validity);
-            if (!field.validity.valid) {
-                invalidMessages[index].style.display = "block";
-                invalidMessages[index].clientHeight;
-                invalidMessages[index].style.opacity = 1;
-                event.preventDefault();
+    const initSecretFields = function() {
+        const trigger = document.querySelector("#tiger");
+        const tigerSecret = document.querySelector("#tiger-secret");
+        const tigerField = document.querySelector("#tiger-type");
+        trigger.addEventListener("change", () => {
+            if (trigger.checked) {
+                tigerSecret.style.display = "flex";
+                tigerSecret.clientHeight;
+                tigerSecret.style.opacity = 1;
+                tigerField.required = true;
             } else {
-                invalidMessages[index].style.display = "none";
-                invalidMessages[index].style.opacity = 0;
+                tigerSecret.style.display = "none";
+                tigerSecret.style.opacity = 0;
+                tigerField.required = false;
             }
-        })
-    });
+        });
+    }
+
+    initValidation();
+    initSecretFields();
 
 });
